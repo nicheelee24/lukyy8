@@ -77,7 +77,7 @@ mongoose
             dbName: 'games2024',
         }
     )
-    .then(() => console.log("Connected to MongoDB"))
+    .then(() => console.log("Connected to games2024 MongoDB"))
     .catch((err) => console.error("Failed to connect to MongoDB", err));
 
 // Start the server
