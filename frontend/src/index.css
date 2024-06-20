@@ -1,0 +1,670 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --bgColorWhite: rgba(0, 0, 0, 1);
+    --primaryColor: #24262b;
+    --secondaryColor: rgba(239, 176, 52, 1);
+    --thirdColor: rgba(44, 44, 44, 0.9);
+    --fourthColor: rgb(54, 54, 54);
+    --fifthColor: #cd2732;
+    --sixthColor: rgba(0, 0, 0, 1);
+
+    --paragraphColor: rgb(65, 63, 63);
+    --innersecondaryColor: rgb(88, 88, 88);
+
+    --borderColor: #a7a7a7;
+    --headingColor: #aeaeae;
+
+    --textPrimaryColor: rgb(209, 209, 209);
+    --textCardColor: white;
+    --textSecondaryColor: rgb(172, 172, 172);
+    --logoutBg: rgba(239, 176, 52, 1);
+
+    --textColumnColor: rgb(204, 203, 203);
+    --bgColors: #7f7f7f30;
+    --newTextColor: #eb6401;
+    --newTextColor: #42930e;
+    --newBgProvider: #252a32;
+    --navbarBorder: #ee1f1f;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Inter Light" !important;
+}
+
+@font-face {
+    font-family: "Arabic Pro Medium";
+    src: url("./assets/font/BasisGrotesqueArabicPro-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Arabic Pro Reg";
+    src: url("./assets/font/BasisGrotesqueArabicPro-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Arabic Pro Bold";
+    src: url("./assets/font/BasisGrotesqueArabicPro-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Inter Light";
+    src: url("./assets/font/Inter/Inter-Light.otf");
+}
+
+@font-face {
+    font-family: "Inter Bold";
+    src: url("./assets/font/Inter/Inter-Bold.otf");
+}
+
+@font-face {
+    font-family: "Inter Regular";
+    src: url("./assets/font/Inter/Inter-Regular.otf");
+}
+
+@layer utilities {
+    @variants responsive {
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+    }
+}
+
+body {
+    background-color: black;
+}
+
+aside {
+    background-color: var(--bgColorWhite);
+    /* border: 1px solid var(--borderColor); */
+    border-bottom-right-radius: 15px;
+    /* min-width: 55px; */
+    /* width: 55px; */
+    height: 100vh;
+    position: sticky;
+    top: 0px;
+
+    box-shadow: 10px 0 10px rgba(0, 0, 0, 0.5);
+
+    /* --page-shadow: linear-gradient(to right, #111415, rgba(17, 20, 21, 0)); */
+}
+
+.custom-hover-bg {
+    background-color: black;
+    transition: background-color 0.3s;
+}
+
+.custom-hover-bg:hover {
+    background-color: var(--logoutBg);
+    color: black !important;
+}
+
+aside .bonus-area {
+    /* flex-direction: column; */
+    /* margin-top: 0.5rem; */
+    /* margin-bottom: 0.5rem; */
+    background: #f0f5ffff;
+    border-radius: 6px;
+    border-width: 1px;
+    border-color: #657ca20d;
+    border-style: solid;
+    box-shadow: 0px 0px 1px #ffffff, 0px 0px 0.1px #171a1f;
+}
+
+/* --------- */
+/*Scrollbar   */
+/* --------- */
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #2d1950;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(178, 121, 216, 0.959);
+    border-radius: 12px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(222, 130, 235, 0.911);
+    border-radius: 12px;
+}
+
+/* tooltip */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 100px;
+    background-color: rgba(178, 121, 216, 0.959);
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 99;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -30px;
+
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -25px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(178, 121, 216, 0.959) transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+aside .bonus-area h1 {
+    font-size: 14px;
+    font-family: "Arabic Pro Medium";
+    line-height: 16.2px;
+    word-wrap: break-word;
+    /* margin-top: 10px; */
+}
+
+aside .bonus-area.active {
+    position: relative;
+}
+
+aside .bonus-area.active::before {
+    width: 3px;
+    height: 60px;
+    content: "";
+    position: absolute;
+    left: -17px;
+    top: 50%;
+    transform: rotate(180deg) translateY(-50%);
+    transform-origin: 0 0;
+    background: linear-gradient(180deg, #42930e 0%, #54aa1e 49%, #428f10 100%);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+aside .bonus-area.active::after {
+    width: 38px;
+    height: 38px;
+    background: linear-gradient(180deg, #42930e 0%, #54aa1e 49%, #428f10 100%);
+    box-shadow: 61px 61px 61px;
+    border-radius: 9999px;
+    filter: blur(25px);
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+aside .bonus-area.active h1 {
+    color: var(--headingColor);
+}
+
+aside .bonus-area span {
+    font-family: "Arabic Pro Bold";
+    color: var(--primaryColor);
+    font-size: 10px;
+    line-height: 135%;
+    border-radius: 4px;
+    background: var(--Active, #46ca22);
+}
+
+aside .first-button-area p,
+aside .refer-button p {
+    font-family: "Arabic Pro Medium";
+    color: var(--headingColor);
+    font-size: 12px;
+    line-height: 135%;
+}
+
+aside .refer-button p {
+    font-family: "Arabic Pro Medium";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 135%;
+    /* 18.9px */
+}
+
+aside .first-button-area>*:first-child {
+    background: linear-gradient(to right, #6d2a69, #433150);
+}
+
+aside .first-button-area>*:last-child {
+    background: linear-gradient(to right, #79642d, #48463c);
+}
+
+aside .refer-button {
+    background: linear-gradient(to right, #4c3e1a, #15191e, #15191e, #15191e);
+}
+
+aside .breaker {
+    margin-bottom: 30px;
+}
+
+.tabs-area ul {
+    background-color: var(--primaryColor);
+    padding: 0px;
+    height: 43px;
+    /* border: 1px solid var(--borderColor); */
+}
+
+.tabs-area ul li {
+    background-color: #5621c0;
+    border-radius: 20px;
+}
+
+.tabs-area ul li>.shadow {
+    /* background: var(--innersecondaryColor); */
+    background-color: #99ff15;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(82.87, 86.63, 95.62, 0.4) inset;
+
+    /* background-color: var(--secondaryColor); */
+}
+
+.tabs-area ul li p {
+    /* color: var(--paragraphColor); */
+    color: white;
+    font-size: 14px;
+    font-family: "Arabic Pro Medium";
+    font-weight: 500;
+    line-height: 135%;
+    /* 18.9px */
+    transition: 0.3s ease all;
+}
+
+.tabs-area ul li.active p {
+    color: #345b00;
+    /* color: var(--headingColor); */
+}
+
+.tabs-area ul li>* {
+    pointer-events: none;
+}
+
+/* header area */
+header {
+    background-color: var(--secondaryColor);
+    /* border-bottom: 1px solid var(--borderColor); */
+    position: sticky;
+    top: 0px;
+    z-index: 9;
+
+    box-shadow: 0px -1px 21px #171a1f, 0px 0px 19px var(--secondaryColor);
+    /* box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5); */
+}
+
+header .input-wrapper {
+    background-color: #0a0e2c;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 4px;
+    border: 1px solid var(--borderColor);
+}
+
+header .input-wrapper input {
+    background: transparent;
+    color: var(--paragraphColor);
+    font-size: 12px;
+    font-family: "Arabic Pro Reg";
+
+    word-wrap: break-word;
+}
+
+header .tabs-area ul {
+    height: 32px;
+    width: 204px;
+}
+
+header .select-bar>div {
+    background-color: var(--innersecondaryColor);
+    padding: 5px;
+}
+
+header .select-bar>div p {
+    color: var(--headingColor);
+    font-size: 12px;
+    font-family: "Arabic Pro Medium";
+    line-height: 135%;
+    /* 16.2px */
+}
+
+header .select-bar>div p span {
+    color: var(--paragraphColor);
+}
+
+.btn-f1 {
+    color: black;
+    height: 44px;
+    font-weight: 600;
+}
+
+
+.btn-f1.deposit {
+    /* background-color: #da115eb3; */
+    background-color: var(--logoutBg) !important;
+    /* background-image: none; */
+    /* background-image: conic-gradient(from 1turn, rgb(95 0 0), rgb(255 1 1)); */
+}
+
+.btn-f1-1 {
+    background-color: var(--logoutBg) !important;
+    color: white;
+}
+
+.btn-f1.withdraw {
+    /* background-color: #6422dfb3; */
+    background-color: rgba(49, 49, 49, 1) !important;
+    color: white;
+    /* background-image: none; */
+    /* background-image: conic-gradient(from 1turn, rgb(159, 59, 236), rgb(175, 99, 233)); */
+}
+
+.btn-f1.withdraw:hover {
+    transition: all 1.5s ease-in-out;
+    background-color: var(--logoutBg) !important;
+    color: black;
+}
+
+.btn-f1.deposit:hover {
+    transition: all 1.5s ease-in-out;
+    background-color: rgba(49, 49, 49, 1) !important;
+    color: white;
+}
+
+header .deposit-button {
+    width: 112px;
+    margin-right: 24px;
+    font-weight: 600;
+}
+
+header .login-btn {
+    background-color: var(--logoutBg) !important;
+    margin-right: 0px !important;
+    color: var(--sixthColor);
+    font-weight: 700;
+}
+
+.login-btn:hover {
+    transition: all 1.5s ease-in-out;
+    background-color: white !important;
+    color: black;
+}
+
+header .icon-buttons>button {
+    background-color: var(--innersecondaryColor);
+    border: 1px solid var(--borderColor);
+}
+
+header .Avatar {
+    border: 1px solid var(--borderColor);
+    padding: 2px;
+}
+
+header .Avatar .arrow-icon {
+    width: 10px;
+    height: 10px;
+    background-color: var(--borderColor);
+}
+
+header .Avatar .arrow-icon {
+    right: 1px;
+    bottom: 0px;
+}
+
+/* footer */
+footer {
+    background-color: var(--bgColorWhite);
+}
+
+footer .footer-width {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer .left-area-footer-why h1,
+footer .logo-footer-area h1,
+footer .cols-footer-area h1 {
+    color: black;
+    font-size: 18px;
+    font-family: "Arabic Pro Medium";
+    line-height: 21.6px;
+    word-wrap: break-word;
+}
+
+footer .left-area-footer-why p,
+footer .logo-footer-area p,
+footer .cols-footer-area p {
+    color: black;
+    font-size: 14px;
+    font-family: "Arabic Pro Reg";
+    line-height: 18.2px;
+    word-wrap: break-word;
+}
+
+footer .left-area-footer-why h2 {
+    color: black;
+    font-size: 16px;
+    font-family: "Arabic Pro Medium";
+    line-height: 20px;
+    word-wrap: break-word;
+}
+
+footer .right-area-footer-why h1 {
+    color: black;
+    font-size: 18px;
+    font-family: "Arabic Pro Medium";
+    line-height: 21.6px;
+    word-wrap: break-word;
+}
+
+footer .right-area-footer-why textarea {
+    background-color: transparent;
+    border: 1px solid rgba(69, 69, 69, 1);
+    outline: none;
+
+    font-size: 14px;
+    font-family: "Arabic Pro Reg";
+    line-height: 18.2px;
+    word-wrap: break-word;
+}
+
+footer .right-area-footer-why textarea::placeholder {
+    color: black;
+}
+
+.see-all {
+    color: rgb(222, 209, 239) !important;
+}
+
+footer .right-area-footer-why .submit p {
+    color: black;
+    font-size: 14px;
+    font-family: "Arabic Pro Reg";
+    line-height: 18.2px;
+    word-wrap: break-word;
+}
+
+footer .right-area-footer-why>p {
+    color: black;
+    font-size: 14px;
+    font-family: "Arabic Pro Reg";
+    line-height: 18.2px;
+    word-wrap: break-word;
+}
+
+/* footer .right-area-footer-why > p a {
+  color: #53a91c;
+} */
+
+footer .list-area-footer ul .head {
+    color: black;
+    font-size: 16px;
+    font-family: "Arabic Pro Medium";
+    line-height: 20px;
+    word-wrap: break-word;
+    margin-bottom: 29px;
+    font-weight: 800;
+}
+
+footer .list-area-footer ul li:not(.head) a {
+    color:rgba(0, 0, 0, 1);
+    font-size: 14px;
+    font-family: "Arabic Pro Reg";
+    line-height: 18.2px;
+    word-wrap: break-word;
+    margin-bottom: 19px;
+}
+
+footer .logo-footer-area .right-area p {
+    width: 70%;
+}
+
+footer .cols-footer-area p span {
+    color: var(--headingColor);
+}
+
+footer .copyright-area p {
+    color: black;
+    font-size: 16px;
+    font-family: "Arabic Pro Reg";
+    line-height: 19.2px;
+    word-wrap: break-word;
+}
+
+footer .icons-wrapper h1 {
+    color: black;
+    font-size: 16px;
+    font-family: "Arabic Pro Medium";
+    line-height: 20px;
+    word-wrap: break-word;
+}
+
+footer .icons-wrapper a {
+    color: #51a61c;
+    font-size: 16px;
+    font-family: "Arabic Pro Medium";
+    line-height: 19.2px;
+    word-wrap: break-word;
+}
+
+.image-blur {
+    filter: blur(8px);
+    /* Adjust as needed */
+}
+
+.image-loaded {
+    filter: none;
+}
+
+.how-it-works {
+    background: url("./assets/img/bg-works.png");
+    background-color: #134f8e4d;
+    background-size: cover;
+}
+
+.square-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    /* This ensures the height is equal to the width */
+    object-fit: cover;
+    /* This ensures the image covers the entire container without stretching */
+    border-radius: 50%;
+}
+
+.square-image-container {
+    padding: 2%;
+    /* Adjust this value as needed to make the image smaller */
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.presentation {
+    background: var(--logoutBg);
+}
+
+.lazy-load-image-background {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 480px) {
+    .logo-mobile {
+        width: 70px;
+    }
+
+    .mobile-view {
+        margin-left: -5px;
+    }
+
+    .mobile-view-logout {
+        margin-left: -10px;
+    }
+}
+
+@media screen and (max-width: 355px) {
+    .logo-mobile {
+        width: 60px;
+    }
+
+    .on-mobile-views {
+        padding: 6px 15px;
+    }
+
+    .on-mobile-views-login {
+        padding: 4px 10px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .on-mobile-views {
+        padding: 6px 15px;
+    }
+
+    .on-mobile-views-login {
+        padding: 4px 10px;
+    }
+}
+
+.footers {
+    background: linear-gradient(180deg, #F0B309 0%, #8A6705 100%);
+}
