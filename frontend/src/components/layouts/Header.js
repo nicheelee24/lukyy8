@@ -13,7 +13,7 @@ import logo from "../../assets/img/teslla_logo2.png";
 
 import Update from "../../assets/update.svg";
 
-import LuckygaoLogo from "../../assets/img/Logo/luckyy.jpeg";
+import LuckygaoLog from "../../assets/img/Logo/luckyy.jpeg";
 import LuckygaoLogoSmall from "../../assets/img/luckygao_logo_small.png";
 
 import Login from "../signs/Login";
@@ -140,7 +140,7 @@ export const Header = () => {
 
                     <img
                         src={
-                            isMobileDevice() ? LuckygaoLogo : LuckygaoLogo
+                            isMobileDevice() ? LuckygaoLog : LuckygaoLog
                         }
                         alt="Teslla"
                         className={`w-[65px] h-[auto] ml-2 ${expandMenuState ? "hidden" : "ml:flex"
