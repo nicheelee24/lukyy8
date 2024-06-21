@@ -171,9 +171,9 @@ export const Footer = () => {
             <div className="content-footer-area px-3 md:px-3 mx-auto footers">
                 <div className="why-area grid lg:grid-cols-2 gap-6 lg:gap-36">
                     <div className="left-area-footer-why">
-                        <h1 className="pt-10">{t("Why AMA 777?")}</h1>
-                        <p className="mt-8">{t("The Widest Selection of Games. At AMA 777, we believe that variety is the spice of life. Whether you're a fan of casino games, a sports betting enthusiast, or simply looking for new challenges, we've got you covered. Our gaming hub is constantly updated with the latest and greatest offerings, from card games and slot machines, to competitive sports betting, and more!")}</p>
-                        <p className="mt-4">{t("Interested in elevating your gaming and earning experience? AMA 777 is offering you a golden opportunity you don't want to miss. Join our affiliate program and earn incredible commissions, up to a staggering 60%, along with enticing incentives and cashback rewards!")}</p>
+                        <h1 className="pt-10">{t("Why Lucky8?")}</h1>
+                        <p className="mt-8">{t("The Widest Selection of Games. At Lucky8, we believe that variety is the spice of life. Whether you're a fan of casino games, a sports betting enthusiast, or simply looking for new challenges, we've got you covered. Our gaming hub is constantly updated with the latest and greatest offerings, from card games and slot machines, to competitive sports betting, and more!")}</p>
+                        <p className="mt-4">{t("Interested in elevating your gaming and earning experience? Lucky8 is offering you a golden opportunity you don't want to miss. Join our affiliate program and earn incredible commissions, up to a staggering 60%, along with enticing incentives and cashback rewards!")}</p>
                         <h1 className="mt-9 mb-8">{t("Join Our Community")}</h1>
                         <div className="flex items-center social-icons-footer">
                             <a href="/" className="mr-3">
@@ -216,10 +216,10 @@ export const Footer = () => {
                         <p>
                             {t("Or Email us: ")}
                             <a
-                                href="mailto:ama777.community@gmail.com"
+                                href="mailto:lucky8.community@gmail.com"
                                 className="text-black font-extrabold"
                             >
-                                ama777.community@gmail.com
+                                lucky8.community@gmail.com
                             </a>
                         </p>
                     </div>
@@ -319,16 +319,16 @@ export const Footer = () => {
                                 href="/"
                                 className="text-[32px] font-semibold text-black"
                             >
-                               AMA 777
+                               Lucky8
                             </a>
                             {/* </a> */}
                         </div>
-                        <p className="mt-5">{t("Welcome to AMA 777")}</p>
-                        <p>{t("We're not just another name in the online gaming world; we represent the future of entertainment. We bring you a fantastic mix of casino games, sports betting, and a variety of other interactive experiences—all powered by the revolutionary Web3 technology. With AMA 777, we invite you on a gaming adventure that's both exciting and thrilling, offering an absolute blend of fun and the joy of winning!")}</p>
+                        <p className="mt-5">{t("Welcome to Lucky8")}</p>
+                        <p>{t("We're not just another name in the online gaming world; we represent the future of entertainment. We bring you a fantastic mix of casino games, sports betting, and a variety of other interactive experiences—all powered by the revolutionary Web3 technology. With Lucky8, we invite you on a gaming adventure that's both exciting and thrilling, offering an absolute blend of fun and the joy of winning!")}</p>
                     </div>
                     <div className="right-area">
                         <h1 className="mb-7">{t("So what?")}</h1>
-                        <p>{t("Join AMA 777")}</p>
+                        <p>{t("Join Lucky8")}</p>
                     </div>
                 </div>
 
@@ -375,7 +375,7 @@ export const Footer = () => {
 
                 <div className="cols-footer-area mt-16 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
                     <div className="col">
-                        <h1>{t("Why Choose AMA 777 Affiliate Program?")}</h1>
+                        <h1>{t("Why Choose Lucky8 Affiliate Program?")}</h1>
                         <p className="mt-7">
                             <span>{t("Highest Commissions")}:</span>{" "}
                             {t("Earn up to")}
@@ -394,7 +394,7 @@ export const Footer = () => {
                 </div>
 
                 <div className="copyright-area mt-20 pb-4 flex flex-col sm:flex-row gap-4 items-center justify-between">
-                    <p>© 2024 AMA 777. {t("All rights reserved")}</p>
+                    <p>© 2024 Lucky8. {t("All rights reserved")}</p>
                     <p>{t("Privacy Policy")}</p>
                 </div>
             </div>

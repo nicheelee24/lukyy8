@@ -13,7 +13,7 @@ import logo from "../../assets/img/teslla_logo2.png";
 
 import Update from "../../assets/update.svg";
 
-import LuckygaoLogo from "../../assets/img/Logo/emma-logo.jpg";
+import LuckygaoLogo from "../../assets/img/Logo/lucky-logo.jpg";
 import LuckygaoLogoSmall from "../../assets/img/luckygao_logo_small.png";
 
 import Login from "../signs/Login";
