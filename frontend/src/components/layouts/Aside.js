@@ -10,7 +10,7 @@ import login from "../../assets/img/aside/login.png";
 import signup from "../../assets/img/aside/signup.png";
 // import logo from '../../assets/img/logo.svg'
 import logo from "../../assets/img/Logo/logos.png";
-import LuckygaoLogo from "../../assets/img/Logo/emma-logo.jpg";
+import LuckygaoLogo from "../../assets/img/Logo/luckyy.jpeg";
 
 import Login from "../signs/Login";
 import ResetPassword from "../signs/ResetPassword";
