@@ -244,7 +244,7 @@ export const Aside = () => {
                                     <img
                                         src={LuckygaoLogo}
                                         alt="logo"
-                                        className="w-[50%]"
+                                        className="w-[50%]" style={{width: "75%",marginLeft:"-25px"}}
                                     />
                                     {/* <a href='/' className='text-[32px] font-semibold text-[#FF0000]'>LuckyGao</a> */}
                                 </a>
